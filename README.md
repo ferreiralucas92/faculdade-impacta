@@ -27,3 +27,7 @@ resource "aws_instance" "project-iac" {
   subnet_id = var.subnet
   vpc_id = vpc
 
+
+### O que faz o codigo?
+No nosso cenario a ação é simples, localiza o provider, constroi o ambiente, instala o Nginx e expõe a porta 80 para acesso de toda internet
+
