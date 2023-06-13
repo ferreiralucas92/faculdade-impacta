@@ -4,14 +4,14 @@ Antes de iniciar deve conter na maquina onde o codigo será executado, a ACCESS 
 aws configure
 Passe suas credenciais de acesso.
 
-# Para executar a construção da EC2 expondo o serviço, execute:
+## Para executar a construção da EC2 expondo o serviço, execute:
 
 terraform init > o mesmo dará inicio a comunicação com o Provider, no nosso caso é a AWS, mas serve para qualquer provedor que o terraform tenha suporte.
 terraform validate > irá validar se o codigo está correto
 terraform plan > trará uma estimativa do que irá ser criado.
 terraform apply --auto-approve > começa a construção ja validada
 
- # No nosso exemplo, somente estamos passando os parametros de criação da instancia, então será criado de maneira automatica a VPC, Subnet, PublicIP, Volume Size (será utilizado o padrão do instance type). Caso seja necessario passar parametros existe, podem ser adicionados em variable, conforme exemplo abaixo:
+ ## No nosso exemplo, somente estamos passando os parametros de criação da instancia, então será criado de maneira automatica a VPC, Subnet, PublicIP, Volume Size (será utilizado o padrão do instance type). Caso seja necessario passar parametros existe, podem ser adicionados em variable, conforme exemplo abaixo:
 
 variable "aws" {
     type = "string"
